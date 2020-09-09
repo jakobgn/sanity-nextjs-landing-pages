@@ -30,12 +30,20 @@
 .image {
   display: block;
   width: 100%;
+  max-width: 550px;
+}
+.text{
+  max-width: 550px;
+  padding:30px;
 }
 
 .content {
+  display:flex;
+  justify-content: center;
   position: relative;
+  flex-wrap: wrap;
   margin: 0 1.5rem;
-  max-width: var(--width-medium);
+  max-width: var(--width-large);
 
   @nest & figcaption {
     width: 100%;

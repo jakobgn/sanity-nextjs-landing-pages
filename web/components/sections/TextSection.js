@@ -5,10 +5,16 @@ import styles from './TextSection.module.css'
 
 function TextSection (props) {
   const {heading, label, text} = props
-
+  if (!heading) {
+    return <div className={styles.root}>
+      <section className={styles.article}>
+        {text && <SimpleBlockContent blocks={text} />}
+      </section>
+    </div>
+  }
   return (
     <div className={styles.root}>
-      <section className={styles.article}>
+      <section className={styles.articlebox}>
         <div className={styles.label}>{label}</div>
         <h2 className={styles.heading}>{heading}</h2>
         {text && <SimpleBlockContent blocks={text} />}

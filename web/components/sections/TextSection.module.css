@@ -7,16 +7,29 @@
   @media (--media-min-medium) {
     padding: 4rem 0;
   }
+
 }
 
 .article {
   width: 100%;
-  max-width: var(--width-small);
+  max-width: var(--width-medium);
   margin: 0 auto;
   padding: 0 1.5rem;
   box-sizing: border-box;
+  background: #FFFFFF;
 }
-
+.articlebox {
+  width: 100%;
+  max-width: var(--width-m-small);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  box-sizing: border-box;
+  background: #FFFFFF;
+box-shadow: 0px 5px 18px rgba(0, 0, 0, 0.05);
+border-radius: 8px;
+padding-top:30px;
+padding-bottom:30px;
+}
 .label {
   font-size: var(--font-micro-size);
   line-height: var(--font-micro-line-height);

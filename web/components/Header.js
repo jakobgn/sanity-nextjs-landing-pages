@@ -109,6 +109,11 @@ class Header extends Component {
                   </li>
                 )
               })}
+            <li className={styles.navItem}>
+              <a href='https://monax.dk/'>
+                <button className={styles.button} data-is-active={'false'}>Log ind</button>
+              </a>
+            </li>
           </ul>
           <button className={styles.showNavButton} onClick={this.handleMenuToggle}>
             <HamburgerIcon className={styles.hamburgerIcon} />
