@@ -2,21 +2,34 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import SimpleBlockContent from '../SimpleBlockContent'
 import styles from './TextSection.module.css'
+import Link from 'next/link'
 
 function TextSection (props) {
   const {heading, label, text} = props
-  if (!heading) {
-    return <div className={styles.root}>
-      <section className={styles.article}>
-        {text && <SimpleBlockContent blocks={text} />}
+  if (heading && heading.includes('secondaryButton')) {
+    const elements = heading.split(',')
+    return (
+      <section
+        className={styles.article}
+        style={{textAlign: label === 'center' ? 'center' : 'left'}}
+      >
+        <Link
+          href={elements[2]}
+          prefetch
+        >
+          <button className={styles.secondaryButton} data-is-active={'false'}>{elements[1]}</button>
+        </Link>
+
       </section>
-    </div>
+    )
   }
   return (
     <div className={styles.root}>
-      <section className={styles.articlebox}>
-        <div className={styles.label}>{label}</div>
-        <h2 className={styles.heading}>{heading}</h2>
+      <section
+        className={styles.article}
+        style={{textAlign: label === 'center' ? 'center' : 'left'}}
+      >
+        {heading && <h2 className={styles.heading}>{heading}</h2>}
         {text && <SimpleBlockContent blocks={text} />}
       </section>
     </div>
