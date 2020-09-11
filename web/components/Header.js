@@ -110,7 +110,7 @@ class Header extends Component {
                 )
               })}
             <li className={styles.navItem}>
-              <a href='https://monax.dk/'>
+              <a href='https://app.monax.dk/'>
                 <button className={styles.button} data-is-active={'false'}>Log ind</button>
               </a>
             </li>
