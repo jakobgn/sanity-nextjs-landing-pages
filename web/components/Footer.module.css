@@ -5,8 +5,8 @@
   color: white;
   font-size: var(--font-small-size);
   line-height: var(--font-small-line-height);
-  padding: 2rem 0;
-
+  padding: 2rem;
+  margin-top: 2rem;
 }
 .nav{
   width:100%;

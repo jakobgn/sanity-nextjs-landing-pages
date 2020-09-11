@@ -11,12 +11,13 @@
 }
 
 .secondaryButton {
-margin-bottom:30px;
+  margin-top:4rem;
+margin-bottom:4rem;
   border:none;
    background-color:transparent;
    outline:none;
 
-width: 77px;
+min-width: 88px;
 height: 32px;
 left: 1005px;
 top: -5px;
