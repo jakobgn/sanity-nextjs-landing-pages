@@ -27,9 +27,9 @@
 .articlebox {
 
   width: 100%;
-  max-width: var(--width-m-small);
+  max-width: 349px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 2.0rem;
   box-sizing: border-box;
   background: #FFFFFF;
 box-shadow: 0px 5px 18px rgba(0, 0, 0, 0.05);
