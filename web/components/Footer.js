@@ -15,8 +15,8 @@ function Footer (props) {
             if (!col) {
               return null
             }
-            return <div className={styles.ulContainer}>
-              <ul className={styles.items} key={colIndex}>
+            return <div className={styles.ulContainer} key={colIndex}>
+              <ul className={styles.items} >
                 <li className={styles.colTitle}>{titles[colIndex]}</li>
                 {col.map(item => {
                   const isActive = item.slug && router.pathname === '/LandingPage' && router.query.slug === item.slug.current
@@ -46,9 +46,12 @@ function Footer (props) {
           })}
         </div>
       </nav>
+      {text &&
       <div className={styles.text}>
         <SimpleBlockContent blocks={text} />
       </div>
+      }
+
     </div>
   )
 }

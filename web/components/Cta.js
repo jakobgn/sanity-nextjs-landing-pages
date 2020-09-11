@@ -5,7 +5,7 @@ import styles from './Cta.module.css'
 
 function cta (props) {
   const {title, route, link} = props
-
+  console.log('cta', props)
   if (route && route.slug && route.slug.current) {
     return (
       <Link

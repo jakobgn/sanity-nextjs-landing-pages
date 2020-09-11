@@ -15,7 +15,7 @@ function Layout (props) {
 
   const {title, mainNavigation, footerNavigation1, footerNavigation2, footerNavigation3, footerText, logo, url} = config
   const logoUrl = logo && logo.asset && logo.asset.url
-  const nav = [footerNavigation1, footerNavigation2, footerNavigation3, [{title: 'Linkedin', link: 'https://www.linkedin.com/company/finansieltcv/'}]]
+  const nav = [footerNavigation1, footerNavigation2, footerNavigation3, [{_id: 4, title: 'Linkedin', link: 'https://www.linkedin.com/company/finansieltcv/'}]]
   const titles = ['Monax', 'Information', 'Services', 'Sociale medier']
   return (
     <>
