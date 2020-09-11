@@ -22,7 +22,6 @@
 }
 .rectangles{
   width: 100%;
-  max-width: var(--width-medium);
   display:flex;
   flex-direction: row;
   flex-wrap: wrap;

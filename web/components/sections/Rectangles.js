@@ -9,7 +9,7 @@ const builder = imageUrlBuilder(client)
 function Rectangles ({rectangles}) {
   return (
     <div className={styles.root}>
-      <div className={styles.rectangles}>
+      <div className={styles.rectangles} style={{maxWidth: rectangles.length > 2 ? '75em' : '60em'}}>
         {rectangles.map(rectangle => (
           <Rectangle {...rectangle} key={rectangle._key} />
         ))}
