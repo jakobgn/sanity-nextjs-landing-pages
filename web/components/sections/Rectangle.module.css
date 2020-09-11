@@ -1,0 +1,39 @@
+.root {
+  composes: center from "../../styles/shared.module.css";
+  margin-bottom: 4rem;
+  margin-top: 2rem;
+  padding: 0 1.5rem;
+  @media (--media-min-medium) {
+    padding: 4rem 0;
+  }
+}
+
+.container {
+  composes: narrow-container from "../../styles/shared.module.css";
+  display: flex;
+}
+
+.figure {
+  margin: 0;
+}
+.photo {
+  width: 100px;
+  border-radius: 50%;
+}
+
+.quote {
+  margin: 0 0 0 1rem;
+}
+.articlebox {
+
+  width: 100%;
+  max-width: var(--width-m-small);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  box-sizing: border-box;
+  background: #FFFFFF;
+box-shadow: 0px 5px 18px rgba(0, 0, 0, 0.05);
+border-radius: 8px;
+padding-top:30px;
+padding-bottom:30px;
+}
