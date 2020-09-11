@@ -1,4 +1,4 @@
-import bcp47 from 'bcp47';
+import bcp47 from 'bcp47'
 
 export default {
   name: 'site-config',
@@ -6,24 +6,24 @@ export default {
   title: 'Site configuration',
   // https://www.sanity.io/docs/experimental/ui-affordances-for-actions
   __experimental_actions: [/* create, delete, */ 'update', 'publish'],
-  fieldsets: [{ name: 'footer', title: 'Footer' }],
+  fieldsets: [{name: 'footer', title: 'Footer'}],
   fields: [
     {
       name: 'title',
       type: 'string',
-      title: 'Site title',
+      title: 'Site title'
     },
     {
       title: 'URL',
       name: 'url',
       type: 'url',
-      description: 'The main site url. Used to create canonical url',
+      description: 'The main site url. Used to create canonical url'
     },
     {
       name: 'frontpage',
       type: 'reference',
       description: 'Choose page to be the frontpage',
-      to: { type: 'page' },
+      to: {type: 'page'}
     },
     {
       title: 'Site language',
@@ -34,7 +34,7 @@ export default {
       validation: Rule =>
         Rule.custom(lang =>
           bcp47.parse(lang) ? true : 'Please use a valid bcp47 code'
-        ),
+        )
     },
     {
       title: 'Brand logo',
@@ -49,10 +49,10 @@ export default {
           title: 'Alternative text',
           description: 'Important for SEO and accessiblity.',
           options: {
-            isHighlighted: true,
-          },
-        },
-      ],
+            isHighlighted: true
+          }
+        }
+      ]
     },
     {
       title: 'Main navigation',
@@ -60,36 +60,68 @@ export default {
       description: 'Select pages for the top menu',
       validation: Rule => [
         Rule.max(5).warning('Are you sure you want more than 5 items?'),
-        Rule.unique().error('You have duplicate menu items'),
+        Rule.unique().error('You have duplicate menu items')
       ],
       type: 'array',
       of: [
         {
           type: 'reference',
-          to: [{ type: 'route' }],
-        },
-      ],
+          to: [{type: 'route'}]
+        }
+      ]
     },
     {
-      title: 'Footer navigation items',
-      name: 'footerNavigation',
+      title: 'Footer navigation items1',
+      name: 'footerNavigation1',
       type: 'array',
       validation: Rule => [
         Rule.max(10).warning('Are you sure you want more than 10 items?'),
-        Rule.unique().error('You have duplicate menu items'),
+        Rule.unique().error('You have duplicate menu items')
       ],
       fieldset: 'footer',
       of: [
         {
           type: 'reference',
-          to: [{ type: 'route' }],
-        },
+          to: [{type: 'route'}]
+        }
+      ]
+    },
+    {
+      title: 'Footer navigation items2',
+      name: 'footerNavigation2',
+      type: 'array',
+      validation: Rule => [
+        Rule.max(10).warning('Are you sure you want more than 10 items?'),
+        Rule.unique().error('You have duplicate menu items')
       ],
+      fieldset: 'footer',
+      of: [
+        {
+          type: 'reference',
+          to: [{type: 'route'}]
+        }
+      ]
+    },
+    {
+      title: 'Footer navigation items3',
+      name: 'footerNavigation3',
+      type: 'array',
+      validation: Rule => [
+        Rule.max(10).warning('Are you sure you want more than 10 items?'),
+        Rule.unique().error('You have duplicate menu items')
+      ],
+      fieldset: 'footer',
+      of: [
+        {
+          type: 'reference',
+          to: [{type: 'route'}]
+        }
+      ]
     },
     {
       name: 'footerText',
       type: 'simplePortableText',
-      fieldset: 'footer',
-    },
-  ],
-};
+      fieldset: 'footer'
+    }
+  ]
+}

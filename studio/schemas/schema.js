@@ -25,6 +25,7 @@ import mailchimp from './objects/mailchimp'
 import textSection from './objects/textSection'
 import rectangle from './objects/rectangle'
 import rectangles from './objects/rectangles'
+import footerCol from './objects/footerCol'
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
   name: 'default',
@@ -46,6 +47,7 @@ export default createSchema({
     siteConfig,
     textSection,
     rectangle,
-    rectangles
+    rectangles,
+    footerCol
   ])
 })

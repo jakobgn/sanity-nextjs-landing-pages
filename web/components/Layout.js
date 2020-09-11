@@ -8,15 +8,15 @@ import Footer from './Footer'
 
 function Layout (props) {
   const {config, children} = props
-
   if (!config) {
     console.error('Missing config')
     return <div>Missing config</div>
   }
 
-  const {title, mainNavigation, footerNavigation, footerText, logo, url} = config
+  const {title, mainNavigation, footerNavigation1, footerNavigation2, footerNavigation3, footerText, logo, url} = config
   const logoUrl = logo && logo.asset && logo.asset.url
-
+  const nav = [footerNavigation1, footerNavigation2, footerNavigation3, [{title: 'Linkedin', link: 'https://www.linkedin.com/company/finansieltcv/'}]]
+  const titles = ['Monax', 'Information', 'Services', 'Sociale medier']
   return (
     <>
       <Head>
@@ -25,7 +25,7 @@ function Layout (props) {
       <div className='container'>
         <Header title={title} navItems={mainNavigation} logo={logo} />
         <div className='content'>{children}</div>
-        <Footer navItems={footerNavigation} text={footerText} />
+        <Footer navItems={nav} text={footerText} titles={titles} />
         {logoUrl && url && <LogoJsonLd url={url} logo={logoUrl} />}
       </div>
     </>

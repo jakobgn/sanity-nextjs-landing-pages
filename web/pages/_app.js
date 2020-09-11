@@ -16,6 +16,22 @@ const siteConfigQuery = `
     footerNavigation[] -> {
       ...,
       "title": page->title
+    },
+    footerNavigation1[] -> {
+      ...,
+      "title": page->title
+    },
+    footerNavigation2[] -> {
+      ...,
+      "title": page->title
+    },
+        footerNavigation3[] -> {
+      ...,
+      "title": page->title
+    },
+        footerNavigation4[] -> {
+      ...,
+      "title": page->title
     }
   }[0]
   `
