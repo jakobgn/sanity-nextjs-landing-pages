@@ -8,16 +8,16 @@ import Cta from '../Cta'
 
 const builder = imageUrlBuilder(client)
 
-function Rectangle ({text, ctas, photo, title}) {
+function Rectangle ({text, ctas, photo, title, length}) {
   console.log('ctas', ctas)
   return <div className={styles.root}>
-    <section className={styles.articlebox}>
+    <section className={styles.articlebox} style={{maxWidth: length == 2 ? '550px' : '349px'}}>
       {photo &&
       <img
         src={builder
           .image(photo)
           .auto('format')
-          .width(556)
+          .width(100)
           .url()}
         className={styles.image}
         alt={title}

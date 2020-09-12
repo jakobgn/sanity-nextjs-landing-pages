@@ -11,7 +11,7 @@ function Rectangles ({rectangles}) {
     <div className={styles.root}>
       <div className={styles.rectangles} style={{maxWidth: rectangles.length > 2 ? '75em' : '60em'}}>
         {rectangles.map(rectangle => (
-          <Rectangle {...rectangle} key={rectangle._key} />
+          <Rectangle {...rectangle} key={rectangle._key} length={rectangles.length} />
         ))}
       </div>
     </div>

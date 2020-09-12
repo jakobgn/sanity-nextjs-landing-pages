@@ -17,7 +17,11 @@ function ImageSection (props) {
 
   return (
     <div className={styles.root}>
+      {!text &&
+        <h2 className={styles.content}>{heading}</h2>
+      }
       <figure className={styles.content} style={{flexDirection: label === 'right' ? 'row-reverse' : 'row'}}>
+
         <img
           src={builder
             .image(image)
@@ -25,14 +29,18 @@ function ImageSection (props) {
             .width(556)
             .url()}
           className={styles.image}
+          style={{maxWidth: text ? '550px' : '60em'}}
           alt={heading}
         />
+        {text &&
         <div className={styles.text}>
           <h2>{heading}</h2>
           {text && <SimpleBlockContent blocks={text} />}
           <br />
           {cta && cta.route && <Cta {...cta} />}
         </div>
+        }
+
       </figure>
     </div>
   )
