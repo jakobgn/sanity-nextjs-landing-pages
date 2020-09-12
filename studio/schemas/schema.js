@@ -26,6 +26,8 @@ import textSection from './objects/textSection'
 import rectangle from './objects/rectangle'
 import rectangles from './objects/rectangles'
 import footerCol from './objects/footerCol'
+import testimonial from './objects/testimonial'
+import testimonials from './objects/testimonials'
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
   name: 'default',
@@ -48,6 +50,8 @@ export default createSchema({
     textSection,
     rectangle,
     rectangles,
-    footerCol
+    footerCol,
+    testimonial,
+    testimonials
   ])
 })

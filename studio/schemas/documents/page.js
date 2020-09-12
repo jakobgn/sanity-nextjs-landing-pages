@@ -23,7 +23,9 @@ export default {
         {type: 'imageSection'},
         {type: 'mailchimp'},
         {type: 'textSection'},
-        {type: 'rectangles'}
+        {type: 'rectangles'},
+        {type: 'testimonial'},
+        {type: 'testimonials'}
       ]
     },
     {
