@@ -1,7 +1,7 @@
 .root {
   composes: center from "../../styles/shared.module.css";
   margin-bottom: 0rem;
-  margin-top: 2rem;
+  margin-top: 0rem;
 }
 
 .container {
