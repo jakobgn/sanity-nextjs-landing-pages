@@ -11,7 +11,7 @@ function Footer (props) {
     <div className={styles.root}>
       <nav className={styles.nav}>
         <div className={styles.colContainer}>
-          {navItems && navItems.map((col, colIndex) => {
+          {navItems && navItems.filter(x => x.length>0).map((col, colIndex) => {
             if (!col) {
               return null
             }
