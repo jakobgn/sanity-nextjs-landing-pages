@@ -18,7 +18,7 @@ function Rectangle({ text, ctas, photo, title, length }) {
         className={styles.articlebox}
         style={{
           maxWidth: length == 2 ? "550px" : "349px",
-          minWidth: length == 2 && size.width < 550 ? "550px" : "",
+          minWidth: length == 2 && size.width > 600 ? "550px" : "",
         }}
       >
         {photo && (
