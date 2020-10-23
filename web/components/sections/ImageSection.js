@@ -25,9 +25,9 @@ function ImageSection(props) {
       >
         {size.width < 700 && imageSmall ? (
           <img
-            src={builder.image(imageSmall).auto("format").width(556).url()}
+            src={builder.image(imageSmall).auto("format").width(700).url()}
             className={styles.image}
-            style={{ maxWidth: text ? "550px" : "60em" }}
+            style={{ maxWidth: text ? "700px" : "60em" }}
             alt={heading}
           />
         ) : (
