@@ -5,18 +5,23 @@ import styles from "./Hero.module.css";
 import client from "../../client";
 import SimpleBlockContent from "../SimpleBlockContent";
 import Cta from "../Cta";
+import useWindowSize from "../../hooks/useWindowSize";
 
 function urlFor(source) {
   return imageUrlBuilder(client).image(source);
 }
 
 function Hero(props) {
-  const { heading, backgroundImage, tagline, ctas, preline } = props;
-
+  const { heading, backgroundImage, tagline, ctas, preline, backgroundImageSmall } = props;
+  const size = useWindowSize();
   const style = backgroundImage
-    ? {
-        backgroundImage: `url("${urlFor(backgroundImage).width(2000).auto("format").url()}")`,
-      }
+    ? size.width < 600 && backgroundImageSmall
+      ? {
+          backgroundImage: `url("${urlFor(backgroundImageSmall).width(500).auto("format").url()}")`,
+        }
+      : {
+          backgroundImage: `url("${urlFor(backgroundImage).width(2000).auto("format").url()}")`,
+        }
     : {};
 
   return (

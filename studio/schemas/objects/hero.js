@@ -27,6 +27,14 @@ export default {
       }
     },
     {
+      name: 'backgroundImageSmall',
+      type: 'image',
+      title: 'Background image small',
+      options: {
+        hotspot: true
+      }
+    },
+    {
       name: 'ctas',
       type: 'array',
       title: 'Call to actions',
