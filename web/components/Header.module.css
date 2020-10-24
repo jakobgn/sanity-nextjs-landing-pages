@@ -2,17 +2,23 @@
 @import "../styles/custom-properties.css";
 
 .root {
-  position: relative;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
   color: var(--color-black, #000);
   display: flex;
-  margin: 0 auto;
   max-width: var(--width-small);
+  z-index:100;
 }
 
 .root a {
   color: inherit;
   text-decoration: inherit;
+  color:white;
 }
+
 .button {
 
   border:none;
@@ -69,6 +75,12 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 2
 
 .logo {
   display: block;
+  left:0;
+
+}
+.logo svg{
+  height:48px;
+
 }
 
 .nav {

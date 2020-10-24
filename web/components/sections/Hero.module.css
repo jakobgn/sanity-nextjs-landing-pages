@@ -34,6 +34,11 @@
   padding: 0 1.5em;
   box-sizing: border-box;
   z-index: 1;
+  height:350px;
+  padding-top:60px;
+  @media (--media-min-medium) {
+    height:741px;
+  }
 }
 
 .title {
