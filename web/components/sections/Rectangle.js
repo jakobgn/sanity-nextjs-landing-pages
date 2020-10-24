@@ -10,7 +10,6 @@ import useWindowSize from "../../hooks/useWindowSize";
 const builder = imageUrlBuilder(client);
 
 function Rectangle({ text, ctas, photo, title, length }) {
-  console.log("ctas", ctas);
   const size = useWindowSize();
   return (
     <div className={styles.root}>
