@@ -37,7 +37,7 @@
   height:350px;
   padding-top:60px;
   @media (--media-min-medium) {
-    height:741px;
+    height:66vh;
   }
 }
 
